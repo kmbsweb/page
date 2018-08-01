@@ -5,6 +5,8 @@ html = urlopen("https://www.booking.com/searchresults.ja.html?aid=397594;label=g
 bs0bj = BeautifulSoup(html.read())
 print(bs0bj.title)
 
+
+#ここから
 import requests # urlを読み込むためrequestsをインポート
 from bs4 import BeautifulSoup # htmlを読み込むためBeautifulSoupをインポート
  
@@ -15,7 +17,7 @@ soup = BeautifulSoup(requests.get(URL).content,'lxml') # bsでURL内を解析
 
 import os
 os.getcwd() 
-os.chdir("/Users/ksk/Desktop")
+os.chdir("/Users//Desktop")
 
 for link in soup.find_all("img"): # imgタグを取得しlinkに格納
     if link.get("src").endswith(".jpg"): # imgタグ内の.jpgであるsrcタグを取得
@@ -30,4 +32,4 @@ for target in images: # imagesからtargetに入れる
  
 print("ok") # 確認
 
-# Rstudioで日本語がかきにくいという指摘は正しいのか？
+
